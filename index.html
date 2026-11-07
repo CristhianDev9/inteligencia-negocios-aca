@@ -90,9 +90,12 @@ nav a.on{background:var(--cyan)}
       </ul>
     </div>
   </div>
-  <div class="card" style="margin-top:16px">
+  <div class="card grid g2" style="margin-top:16px;align-items:center">
+    <div>
     <h3>Problema central</h3>
     <p>El analista no tiene un buscador de histórico. Pregunta <b>“de voz a voz”</b> si la falla ya se resolvió, cierra el ticket y <b>no deja informe técnico</b>. Resultado: reprocesos, interrupciones a desarrollo y conocimiento que no se acumula.</p>
+    </div>
+    <img src="voz.jpg" alt="Conocimiento que se pierde de voz a voz" style="width:100%;max-height:230px;object-fit:cover;border-radius:10px">
   </div>
   <div class="num">2 / 7</div>
 </section>
@@ -171,6 +174,7 @@ nav a.on{background:var(--cyan)}
   </svg>
   </div>
   <div class="grid g3" style="margin-top:16px">
+    <div class="card" style="padding:0;overflow:hidden"><img src="ia.jpg" alt="Agente de IA conectado a la base vectorial" style="width:100%;height:100%;min-height:150px;object-fit:cover;display:block"></div>
     <div class="card"><h3>Arquitectura</h3><p>API REST y webhooks de Jira, middleware en Python, base vectorial ChromaDB, modelo de embeddings y 1 administrador.</p></div>
     <div class="card"><h3>Regla de decisión</h3><p>Similitud ≥ 85%: ruta automatizada con validación humana. Menor: ruta manual con diligenciamiento obligatorio. Cada informe nuevo se indexa.</p></div>
     <div class="card"><h3>Control y riesgo</h3><p><b>Human-in-the-Loop:</b> ningún ticket se cierra sin confirmación del analista. Mitiga respuestas desactualizadas por cambios de plataforma.</p></div>
@@ -210,7 +214,7 @@ nav a.on{background:var(--cyan)}
     <div class="card"><h3>Integralidad</h3><p>Las 5 acciones y los 14 componentes de automatización combinan tecnología, procesos y cultura, con auditoría para sostener el resultado.</p></div>
     <div class="card"><h3>Supervisión humana</h3><p>El esquema HITL mantiene la validación técnica del analista y la trazabilidad continua de las operaciones.</p></div>
   </div>
-  <p style="margin-top:22px;font-size:1.2rem;color:var(--ink)"><b>Gracias.</b> ¿Preguntas?</p>
+  <p style="margin-top:22px;font-size:1.2rem;color:var(--ink)"><b>Gracias.</b></p>
   <p class="sub">Fuentes: Hernández et al. (2018); Atlassian (2023); ITIL 4 (2019); Russell &amp; Norvig (2020); Nebula Engineering (2025).</p>
   <div class="num">7 / 7</div>
 </section>
