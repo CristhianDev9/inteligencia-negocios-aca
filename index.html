@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agente de IA para Soporte en Nebula Engineering</title>
+<meta name="description" content="Proyecto integrador de Inteligencia de Negocios - CUN. Optimización del servicio al cliente y trazabilidad de carga con IA e integración con Jira.">
+<style>
+:root{--bg:#06182b;--bg2:#0b2540;--card:#0f2f4f;--ink:#eaf2fb;--mute:#9db4cb;--cyan:#22d3ee;--orange:#fb923c;--green:#4ade80;--red:#f87171;--line:#1d4568}
+*{box-sizing:border-box;margin:0}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;line-height:1.45}
+.slide{min-height:100vh;scroll-snap-align:start;padding:clamp(24px,5vw,64px) clamp(16px,6vw,88px);display:flex;flex-direction:column;justify-content:center;position:relative;border-bottom:1px solid var(--line)}
+.slide:nth-child(even){background:var(--bg2)}
+.tag{color:var(--cyan);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+h1{font-size:clamp(1.6rem,4.2vw,3rem);line-height:1.1;margin-bottom:12px}
+h2{font-size:clamp(1.5rem,3.4vw,2.4rem);line-height:1.15;margin-bottom:20px}
+h3{font-size:1.05rem;margin-bottom:6px}
+p,li{color:var(--mute);font-size:clamp(.92rem,1.4vw,1.08rem)}
+b,strong{color:var(--ink)}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g5{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.big{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1}
+.cy{color:var(--cyan)}.or{color:var(--orange)}.gr{color:var(--green)}.rd{color:var(--red)}
+.sub{font-size:.85rem;color:var(--mute);margin-top:6px}
+ul{padding-left:18px}li{margin:4px 0}
+/* cover */
+.cover{background:linear-gradient(90deg,var(--bg) 35%,rgba(6,24,43,.55)),url(c.jpg) center/cover no-repeat;}
+.logo{background:#fff;border-radius:12px;padding:10px 16px;display:inline-flex;align-items:center;gap:14px;margin-bottom:28px;align-self:flex-start}
+.logo img{height:52px}.logo span{color:#0b3a22;font-weight:700;font-size:.85rem;line-height:1.2;max-width:190px}
+.meta{display:grid;gap:4px;margin:18px 0;color:var(--ink)}
+.meta small{color:var(--mute)}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;max-width:900px;margin-top:10px}
+.team div{background:rgba(15,47,79,.85);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:.88rem;color:var(--mute)}
+.team b{display:block}
+/* bars */
+.bar{height:14px;border-radius:7px;background:var(--line);overflow:hidden;margin:6px 0 12px}
+.bar i{display:block;height:100%;border-radius:7px}
+table{width:100%;border-collapse:collapse;font-size:clamp(.82rem,1.3vw,1rem)}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{color:var(--cyan);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
+td{color:var(--mute)}td:first-child{color:var(--ink);font-weight:600}
+.pill{display:inline-block;background:rgba(34,211,238,.12);color:var(--cyan);border-radius:20px;padding:2px 10px;font-size:.78rem;font-weight:700}
+svg text{font-family:inherit}
+.num{position:absolute;right:24px;bottom:14px;color:var(--mute);font-size:.8rem}
+nav{position:fixed;right:10px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:9}
+nav a{width:10px;height:10px;border-radius:50%;background:var(--line);display:block}
+nav a.on{background:var(--cyan)}
+@media(max-width:700px){nav{display:none}}
+@media print{.slide{page-break-after:always}nav{display:none}}
+</style>
+</head>
+<body>
+<nav id="dots"></nav>
+
+<!-- 1 PORTADA -->
+<section class="slide cover" id="s1">
+  <div class="logo"><img src="logo1.png" alt="Logo CUN"><span>Corporación Unificada Nacional de Educación Superior</span></div>
+  <div class="tag">Proyecto Integrador · ACA Final</div>
+  <h1>Optimización del servicio al cliente, soporte técnico y trazabilidad de carga con IA e integración con Jira</h1>
+  <p style="max-width:720px">Caso de estudio: Nebula Engineering S.A.S. (Colombia)</p>
+  <div class="meta">
+    <div><b>Materia:</b> Inteligencia de Negocios</div>
+    <div><b>Docente:</b> Felipe Alexander Garzón Castillo</div>
+  </div>
+  <div class="team">
+    <div><b>Cristhian Camilo Lengua Parra</b>CC 1054995062<br>cristhian.lengua@cun.edu.co</div>
+    <div><b>Daniel Andrés Álvarez Hernández</b>CC 1036652249<br>daniel.alvarezh@cun.edu.co</div>
+    <div><b>Juan Pablo Valencia Sánchez</b>CC 1234989281<br>juan.valenciasan@cun.edu.co</div>
+  </div>
+</section>
+
+<!-- 2 CONTEXTO -->
+<section class="slide" id="s2">
+  <div class="tag">1 · Contexto y metodología</div>
+  <h2>Un cuello de botella que vive en la memoria de las personas</h2>
+  <div class="grid g2">
+    <div class="card">
+      <h3>La empresa y el proceso</h3>
+      <p><b>Nebula Engineering S.A.S.</b> ofrece monitoreo GPS, asistencia en carretera y optimización de rutas para transportadoras. El proceso intervenido es <b>Servicio al Cliente, Soporte Técnico y Trazabilidad de Carga</b>, que atiende consultas de ubicación, retrasos, fallas de rastreo y PQR mediante tickets en <b>Jira Service Management</b>.</p>
+    </div>
+    <div class="card">
+      <h3>Cómo se recolectó la información</h3>
+      <ul>
+        <li><b>Entrevista semiestructurada</b> a un ex-desarrollador de la compañía: causa raíz y factibilidad técnica de la IA.</li>
+        <li><b>Observación directa</b>: 3 jornadas de 8 h (24 h) con la mesa de ayuda, cronometrando consultas informales.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>Problema central</h3>
+    <p>El analista no tiene un buscador de histórico. Pregunta <b>“de voz a voz”</b> si la falla ya se resolvió, cierra el ticket y <b>no deja informe técnico</b>. Resultado: reprocesos, interrupciones a desarrollo y conocimiento que no se acumula.</p>
+  </div>
+  <div class="num">2 / 7</div>
+</section>
+
+<!-- 3 DIAGNOSTICO -->
+<section class="slide" id="s3">
+  <div class="tag">2 · Diagnóstico e impacto</div>
+  <h2>Lo que cuesta no documentar</h2>
+  <div class="grid g5">
+    <div class="card"><div class="big or">68%</div><div class="sub">de los tickets observados se cerraron sin informe de cambios</div></div>
+    <div class="card"><div class="big or">15–25 min</div><div class="sub">perdidos por ticket en consultas verbales</div></div>
+    <div class="card"><div class="big or">120 h</div><div class="sub">de trabajo efectivo perdidas al mes</div></div>
+    <div class="card"><div class="big or">$4,8 M</div><div class="sub">COP/mes de sobrecosto por reprocesos</div></div>
+    <div class="card"><div class="big rd">4,2 h</div><div class="sub">tiempo medio de resolución (MTTR)</div></div>
+  </div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card">
+      <h3>Satisfacción del cliente (NPS)</h3>
+      <div class="sub">Antes</div><div class="bar"><i style="width:88%;background:var(--green)"></i></div>
+      <div class="sub">Ahora</div><div class="bar"><i style="width:65%;background:var(--red)"></i></div>
+      <p><b>88 → 65 puntos.</b></p>
+    </div>
+    <div class="card">
+      <h3>Causas raíz</h3>
+      <ul>
+        <li>Los formularios de cierre de Jira no tienen campos obligatorios.</li>
+        <li>El personal teme demorarse con formatos largos.</li>
+        <li>No existe un agente que entregue la solución previa de inmediato.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="num">3 / 7</div>
+</section>
+
+<!-- 4 ACCIONES -->
+<section class="slide" id="s4">
+  <div class="tag">3 · Acciones de mejora</div>
+  <h2>Cinco acciones: tecnología, proceso y personas</h2>
+  <div class="grid g5">
+    <div class="card"><span class="pill">8 semanas</span><h3 style="margin-top:10px">1. Agente de IA (RAG)</h3><p>Búsqueda semántica de soluciones previas en Jira. Meta: −80% en tiempo de búsqueda.</p></div>
+    <div class="card"><span class="pill">2 semanas</span><h3 style="margin-top:10px">2. Cierre obligatorio</h3><p>Causa raíz, componente e informe de cambio antes de cerrar. Meta: 100% documentado.</p></div>
+    <div class="card"><span class="pill">4 semanas</span><h3 style="margin-top:10px">3. KEDB</h3><p>Base de errores conocidos en Confluence bajo ITIL v4.</p></div>
+    <div class="card"><span class="pill">3 semanas</span><h3 style="margin-top:10px">4. Cultura documental</h3><p>16 h de talleres sobre trazabilidad, ITIL v4 y uso del agente.</p></div>
+    <div class="card"><span class="pill">Permanente</span><h3 style="margin-top:10px">5. Auditoría y SLA</h3><p>Revisión semanal del 10% de tickets cerrados. Meta: conformidad &gt; 95%.</p></div>
+  </div>
+  <p style="margin-top:18px">Prioridad inmediata: <b>Acción 1</b> y <b>Acción 2</b>. La segunda alimenta con datos limpios el aprendizaje continuo de la primera.</p>
+  <div class="num">4 / 7</div>
+</section>
+
+<!-- 5 AUTOMATIZACION -->
+<section class="slide" id="s5">
+  <div class="tag">4 · Propuesta de automatización</div>
+  <h2>Agente RAG con validación humana</h2>
+  <div class="card" style="padding:12px;overflow-x:auto">
+  <svg viewBox="0 0 1000 300" width="100%" style="min-width:720px" role="img" aria-label="Flujograma del agente de IA">
+    <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8z" fill="#9db4cb"/></marker></defs>
+    <g fill="none" stroke="#9db4cb" stroke-width="1.8" marker-end="url(#ar)">
+      <path d="M130,70 H170"/><path d="M290,70 H330"/><path d="M450,70 H490"/>
+      <path d="M610,70 H650"/><path d="M770,70 H810"/>
+      <path d="M550,105 V200 H650" /><path d="M770,200 H810"/>
+      <path d="M870,95 V150"/><path d="M870,210 V250"/>
+    </g>
+    <g font-size="13" fill="#eaf2fb" text-anchor="middle">
+      <rect x="10" y="45" width="120" height="50" rx="25" fill="#0f2f4f" stroke="#22d3ee"/><text x="70" y="75">Ticket en Jira</text>
+      <rect x="170" y="45" width="120" height="50" rx="8" fill="#0f2f4f" stroke="#1d4568"/><text x="230" y="68">Extrae datos</text><text x="230" y="84" fill="#9db4cb" font-size="11">asunto, guía, error</text>
+      <rect x="330" y="45" width="120" height="50" rx="8" fill="#0f2f4f" stroke="#22d3ee"/><text x="390" y="68">Búsqueda</text><text x="390" y="84" fill="#9db4cb" font-size="11">semántica RAG</text>
+      <path d="M550,35 L610,70 L550,105 L490,70z" fill="#0f2f4f" stroke="#fb923c" stroke-width="2"/><text x="550" y="66" font-size="12">Similitud</text><text x="550" y="82" font-size="12" fill="#fb923c">≥ 85%?</text>
+      <rect x="650" y="45" width="120" height="50" rx="8" fill="#0f2f4f" stroke="#4ade80"/><text x="710" y="68">Sugiere solución</text><text x="710" y="84" fill="#9db4cb" font-size="11">+ borrador informe</text>
+      <rect x="810" y="45" width="120" height="50" rx="8" fill="#0f2f4f" stroke="#4ade80"/><text x="870" y="68">Analista valida</text><text x="870" y="84" fill="#9db4cb" font-size="11">1 clic (HITL)</text>
+      <rect x="650" y="170" width="120" height="60" rx="8" fill="#0f2f4f" stroke="#fb923c"/><text x="710" y="195">Ruta manual</text><text x="710" y="211" fill="#9db4cb" font-size="11">plantilla obligatoria</text>
+      <rect x="810" y="150" width="120" height="60" rx="8" fill="#0f2f4f" stroke="#22d3ee"/><text x="870" y="175">Cierre + informe</text><text x="870" y="191" fill="#9db4cb" font-size="11">indexado en ChromaDB</text>
+      <rect x="810" y="250" width="120" height="40" rx="20" fill="#0f2f4f" stroke="#22d3ee"/><text x="870" y="275">Fin</text>
+    </g>
+    <text x="540" y="148" fill="#fb923c" font-size="12">No (&lt; 85%)</text>
+    <text x="640" y="30" fill="#4ade80" font-size="12">Sí</text>
+  </svg>
+  </div>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card"><h3>Arquitectura</h3><p>API REST y webhooks de Jira, middleware en Python, base vectorial ChromaDB, modelo de embeddings y 1 administrador.</p></div>
+    <div class="card"><h3>Regla de decisión</h3><p>Similitud ≥ 85%: ruta automatizada con validación humana. Menor: ruta manual con diligenciamiento obligatorio. Cada informe nuevo se indexa.</p></div>
+    <div class="card"><h3>Control y riesgo</h3><p><b>Human-in-the-Loop:</b> ningún ticket se cierra sin confirmación del analista. Mitiga respuestas desactualizadas por cambios de plataforma.</p></div>
+  </div>
+  <div class="num">5 / 7</div>
+</section>
+
+<!-- 6 VIABILIDAD -->
+<section class="slide" id="s6">
+  <div class="tag">5 · Viabilidad e impacto</div>
+  <h2>Una inversión que se recupera en menos de 4 meses</h2>
+  <div class="card" style="overflow-x:auto">
+    <table>
+      <thead><tr><th>Acción priorizada</th><th>Costo (COP)</th><th>Despliegue</th><th>Indicador</th><th>Meta</th></tr></thead>
+      <tbody>
+        <tr><td>1. Agente de IA (RAG + Jira)</td><td>$8.500.000</td><td>8 semanas</td><td>MTTR</td><td class="gr">4,2 h → 1,5 h</td></tr>
+        <tr><td>2. Protocolo obligatorio</td><td>$1.200.000</td><td>2 semanas</td><td>% tickets documentados</td><td class="gr">32% → 100%</td></tr>
+        <tr><td>3. KEDB (Confluence)</td><td>$1.800.000</td><td>4 semanas</td><td>Horas de reproceso/mes</td><td class="gr">120 h → 10 h</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid g3" style="margin-top:16px">
+    <div class="card"><div class="big cy">$11,5 M</div><div class="sub">inversión total de las tres acciones</div></div>
+    <div class="card"><div class="big gr">$4,4 M</div><div class="sub">COP/mes recuperados al eliminar 110 h de reprocesos</div></div>
+    <div class="card"><div class="big gr">&lt; 4 meses</div><div class="sub">retorno de la inversión (ROI)</div></div>
+  </div>
+  <div class="num">6 / 7</div>
+</section>
+
+<!-- 7 CONCLUSIONES -->
+<section class="slide" id="s7">
+  <div class="tag">6 · Conclusiones</div>
+  <h2>De datos operativos a conocimiento reutilizable</h2>
+  <div class="grid g2">
+    <div class="card"><h3>Diagnóstico</h3><p>El principal cuello de botella es el cierre informal “voz a voz” y la falta de historización estructurada en Jira Service Management.</p></div>
+    <div class="card"><h3>Solución</h3><p>El agente RAG indexado en Jira reduce el MTTR de 4,2 a 1,5 horas y elimina 120 horas mensuales de reprocesos.</p></div>
+    <div class="card"><h3>Integralidad</h3><p>Las 5 acciones y los 14 componentes de automatización combinan tecnología, procesos y cultura, con auditoría para sostener el resultado.</p></div>
+    <div class="card"><h3>Supervisión humana</h3><p>El esquema HITL mantiene la validación técnica del analista y la trazabilidad continua de las operaciones.</p></div>
+  </div>
+  <p style="margin-top:22px;font-size:1.2rem;color:var(--ink)"><b>Gracias.</b> ¿Preguntas?</p>
+  <p class="sub">Fuentes: Hernández et al. (2018); Atlassian (2023); ITIL 4 (2019); Russell &amp; Norvig (2020); Nebula Engineering (2025).</p>
+  <div class="num">7 / 7</div>
+</section>
+
+<script>
+const slides=[...document.querySelectorAll('.slide')],dots=document.getElementById('dots');
+slides.forEach((s,i)=>{const a=document.createElement('a');a.href='#'+s.id;a.title='Diapositiva '+(i+1);dots.appendChild(a)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)[...dots.children].forEach((d,i)=>d.classList.toggle('on',slides[i]===e.target))}),{threshold:.5});
+slides.forEach(s=>io.observe(s));
+addEventListener('keydown',e=>{
+  const cur=slides.findIndex(s=>Math.abs(s.getBoundingClientRect().top)<10);const i=cur<0?0:cur;
+  if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();slides[Math.min(i+1,slides.length-1)].scrollIntoView()}
+  if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();slides[Math.max(i-1,0)].scrollIntoView()}
+});
+</script>
+</body>
+</html>
